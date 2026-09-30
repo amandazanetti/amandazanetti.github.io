@@ -304,13 +304,6 @@ footer * {
   transition: border-color 0.15s ease;
 }
 
-.az-section-body .az-degree a::after {
-  content: " ↗";
-  font-family: var(--az-sans);
-  font-size: 0.8em;
-  color: var(--az-accent);
-}
-
 .az-section-body .az-degree a:hover,
 .az-section-body .az-degree a:focus-visible {
   border-bottom-color: var(--az-accent);
