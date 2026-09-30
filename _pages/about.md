@@ -79,7 +79,7 @@ description: Psicanalista de orientação lacaniana (EPFCL), doutora em Psicolog
     </p>
     <div class="az-actions">
       <a class="az-button" href="https://wa.me/5592988476723">Agendar pelo WhatsApp</a>
-      <a class="az-link" href="http://lattes.cnpq.br/0357379859190411">Currículo Lattes <span aria-hidden="true">→</span></a>
+      <a class="az-link" href="http://lattes.cnpq.br/0357379859190411">Currículo Lattes</a>
     </div>
   </div>
 
@@ -149,15 +149,12 @@ description: Psicanalista de orientação lacaniana (EPFCL), doutora em Psicolog
       <li>
         <p class="az-degree">Graduação e Mestrado em Psicologia</p>
         <p class="az-school">Universidade Federal do Amazonas — UFAM</p>
-        <p class="az-note">
-          Dissertação (2021) sobre as vivências de espiritualidade de pacientes e familiares em cuidados paliativos oncológicos. Pesquisa em
-          saúde coletiva na FCECON e na Fundação de Medicina Tropical Dr. Heitor Vieira Dourado.
-        </p>
+        <p class="az-note">Dissertação (2021) sobre as vivências de espiritualidade de pacientes e familiares em cuidados paliativos oncológicos.</p>
       </li>
       <li>
         <p class="az-degree">Doutorado em Psicologia Clínica e Cultura</p>
         <p class="az-school">Universidade de Brasília — UnB</p>
-        <p class="az-note">Tese: <em>As formações do psicanalista e a regulamentação da psicanálise</em>.</p>
+        <p class="az-note">Tese sobre as formações do psicanalista e a regulamentação da psicanálise.</p>
       </li>
     </ol>
   </div>
