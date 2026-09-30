@@ -38,10 +38,18 @@ jobs:
       - name: Install JS deps
         run: npm ci
       - name: Install and Build
+        env:
+          CRONITOR_RUM_CLIENT_KEY: ${{ secrets.CRONITOR_RUM_CLIENT_KEY }}
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           export JEKYLL_ENV=production
-          bundle exec jekyll build
+          # Keep the Cronitor RUM key out of the repository: inject it from a secret at build time.
+          config=_config.yml
+          if [ -n "$CRONITOR_RUM_CLIENT_KEY" ]; then
+            printf 'cronitor_rum_client_key: "%s"\n' "$CRONITOR_RUM_CLIENT_KEY" > _config.secrets.yml
+            config="$config,_config.secrets.yml"
+          fi
+          bundle exec jekyll build --config "$config"
       - name: Purge unused CSS
         run: |
           npm install -g purgecss

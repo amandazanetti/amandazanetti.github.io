@@ -86,8 +86,8 @@ og_image: https://psi-amandazanetti.com/assets/img/prof_pic.jpg
 analytics:
   google:
 
-# Cronitor RUM (visits and page performance). The Site client key is public by
-# design; never put the Cronitor API/SDK key here. Loaded only in production builds.
+# Cronitor RUM (visits and page performance). Leave blank here: the deploy workflow
+# fills it from the CRONITOR_RUM_CLIENT_KEY repository secret. Loaded only in production builds.
 cronitor_rum_client_key:
 
 # -----------------------------------------------------------------------------
