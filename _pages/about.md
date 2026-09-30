@@ -6,6 +6,14 @@ description: Psicanalista de orientação lacaniana (EPFCL), doutora em Psicolog
 
 <link rel="stylesheet" href="{{ '/assets/css/amanda.css' | relative_url | bust_file_cache }}">
 
+{% if jekyll.environment == 'production' and site.cronitor_rum_client_key %}
+  <script async src="https://rum.cronitor.io/script.js"></script>
+  <script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '{{ site.cronitor_rum_client_key }}' });
+  </script>
+{% endif %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
