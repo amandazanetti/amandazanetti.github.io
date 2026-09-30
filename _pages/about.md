@@ -34,6 +34,7 @@ description: Psicanalista de orientação lacaniana (EPFCL), doutora em Psicolog
     { "@type": "Organization", "name": "Fórum do Campo Lacaniano da Região Serrana do Rio de Janeiro", "url": "https://www.campolacaniano.com.br/forum/forum-regiao-serrana-rj/" },
     { "@type": "Organization", "name": "Fórum em Formação do Campo Lacaniano de Manaus", "url": "https://www.instagram.com/ffclmanaus/" }
   ],
+  "email": "mailto:psi.amandazanetti@gmail.com",
   "sameAs": [
     "https://www.instagram.com/furoanalitico",
     "http://lattes.cnpq.br/0357379859190411"
@@ -206,6 +207,10 @@ description: Psicanalista de orientação lacaniana (EPFCL), doutora em Psicolog
     <li>
       <span class="az-contact-kind">WhatsApp</span>
       <a href="https://wa.me/5592988476723">+55 92 98847-6723</a>
+    </li>
+    <li>
+      <span class="az-contact-kind">E-mail</span>
+      <a href="mailto:{{ 'psi.amandazanetti@gmail.com' | encode_email }}">{{ 'psi.amandazanetti@gmail.com' | html_encode_email }}</a>
     </li>
     <li>
       <span class="az-contact-kind">Instagram</span>
