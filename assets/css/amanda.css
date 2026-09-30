@@ -1,0 +1,483 @@
+/* Visual identity for Amanda Zanetti's site: editorial, sober, paper white with ink and one deep navy accent. */
+
+:root {
+  --az-paper: #fbfaf8;
+  --az-ink: #16181d;
+  --az-text: #2d3038;
+  --az-muted: #6a6e78;
+  --az-rule: #dcd9d3;
+  --az-accent: #1f2d4d;
+  --az-band: #14171e;
+  --az-band-text: #c9ccd3;
+  --az-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --az-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* Re-tint the theme chrome (footer, links). */
+  --global-bg-color: var(--az-paper);
+  --global-text-color: var(--az-text);
+  --global-text-color-light: var(--az-muted);
+  --global-theme-color: var(--az-accent);
+  --global-hover-color: var(--az-ink);
+  --global-footer-bg-color: var(--az-band);
+  --global-footer-text-color: #8a8f99;
+  --global-footer-link-color: var(--az-band-text);
+  --global-divider-color: var(--az-rule);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--az-paper);
+  color: var(--az-text);
+  font-family: var(--az-sans);
+  font-size: 1rem;
+  overflow-x: clip;
+}
+
+/* Single-page site: the theme navbar would only link back to this page; the page has its own nav. */
+body > header {
+  display: none;
+}
+
+body > .container.mt-5 {
+  margin-top: 0 !important;
+}
+
+footer {
+  background: var(--az-band);
+  border-top: 1px solid #262a33;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+footer,
+footer * {
+  color: #8a8f99 !important;
+}
+
+/* ---------------------------------------------------------------------------
+ * Page
+ * ------------------------------------------------------------------------- */
+
+.az a {
+  text-decoration: none;
+}
+
+.az p {
+  color: var(--az-text);
+}
+
+.az-label,
+.az-section-label,
+.az-facts dt,
+.az-contact-kind,
+.az-details span {
+  font-family: var(--az-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--az-muted);
+}
+
+/* Top nav */
+
+.az-nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.6rem 0 1.4rem;
+  border-bottom: 1px solid var(--az-rule);
+}
+
+.az-brand {
+  font-family: var(--az-serif);
+  font-size: 1.15rem;
+  color: var(--az-ink) !important;
+}
+
+.az-nav ul {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.az-nav ul a {
+  font-size: 0.85rem;
+  color: var(--az-muted) !important;
+  transition: color 0.15s ease;
+}
+
+.az-nav ul a:hover,
+.az-nav ul a:focus-visible {
+  color: var(--az-ink) !important;
+}
+
+/* Hero */
+
+.az-hero {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  align-items: end;
+  gap: 4rem;
+  padding: 4.5rem 0 4rem;
+}
+
+.az-name {
+  font-family: var(--az-serif);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6.5vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--az-ink);
+  margin: 1rem 0 1.6rem;
+}
+
+.az-lead {
+  font-family: var(--az-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 32rem;
+  margin: 0 0 2.2rem;
+}
+
+.az-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.az-button {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  background: var(--az-accent);
+  border: 1px solid var(--az-accent);
+  border-radius: 2px;
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.az-button:hover,
+.az-button:focus-visible {
+  background: transparent;
+  color: var(--az-accent) !important;
+}
+
+.az-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--az-accent) !important;
+  border-bottom: 1px solid var(--az-rule);
+  padding-bottom: 2px;
+}
+
+.az-link:hover,
+.az-link:focus-visible {
+  border-bottom-color: var(--az-accent);
+}
+
+.az-portrait {
+  margin: 0;
+}
+
+.az-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 2px;
+}
+
+/* Key facts strip */
+
+.az-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 0 2rem;
+  border-top: 1px solid var(--az-ink);
+  border-bottom: 1px solid var(--az-rule);
+}
+
+.az-facts + .az-section {
+  border-top: 0;
+}
+
+.az-facts > div {
+  padding: 1.3rem 1.2rem 1.4rem 0;
+}
+
+.az-facts > div + div {
+  padding-left: 1.2rem;
+  border-left: 1px solid var(--az-rule);
+}
+
+.az-facts dt {
+  margin-bottom: 0.5rem;
+}
+
+.az-facts dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--az-ink);
+}
+
+/* Numbered sections: label column + content column */
+
+.az-section {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--az-rule);
+}
+
+.az-section-label {
+  margin: 0.45rem 0 0;
+}
+
+.az-section-label span {
+  color: var(--az-accent);
+  margin-right: 0.6rem;
+}
+
+.az-section-body {
+  max-width: 40rem;
+}
+
+.az-heading {
+  font-family: var(--az-serif);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--az-ink);
+  margin: 0 0 1.4rem;
+}
+
+.az-section-body p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin: 0 0 1.1rem;
+}
+
+.az-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.az-timeline li {
+  padding: 0 0 1.6rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--az-rule);
+}
+
+.az-timeline li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.az-section-body .az-degree {
+  font-family: var(--az-serif);
+  font-size: 1.3rem;
+  line-height: 1.35;
+  color: var(--az-ink);
+  margin: 0 0 0.3rem;
+}
+
+.az-section-body .az-degree a {
+  color: var(--az-ink) !important;
+  border-bottom: 1px solid var(--az-rule);
+  transition: border-color 0.15s ease;
+}
+
+.az-section-body .az-degree a::after {
+  content: " ↗";
+  font-family: var(--az-sans);
+  font-size: 0.8em;
+  color: var(--az-accent);
+}
+
+.az-section-body .az-degree a:hover,
+.az-section-body .az-degree a:focus-visible {
+  border-bottom-color: var(--az-accent);
+}
+
+.az-section-body .az-pub-type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--az-accent);
+  margin: 0 0 0.4rem;
+}
+
+.az-section-body .az-school {
+  font-size: 0.9rem;
+  color: var(--az-accent);
+  font-weight: 500;
+  margin: 0 0 0.6rem;
+}
+
+.az-section-body .az-note {
+  font-size: 0.95rem;
+  color: var(--az-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.az-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.az-details li {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--az-rule);
+  color: var(--az-ink);
+}
+
+.az-details li:first-child {
+  padding-top: 0.4rem;
+}
+
+/* Contact band: full-bleed dark block that flows into the footer */
+
+.az-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 3rem calc(50% - 50vw) 0;
+  padding: 4.5rem calc(50vw - 50%) 4rem;
+  background: var(--az-band);
+}
+
+.az-contact .az-section-label {
+  color: #8a8f99;
+}
+
+.az-contact .az-section-label span {
+  color: #9fb0d4;
+}
+
+.az-contact .az-heading {
+  color: #f3f1ec;
+  margin-top: 1rem;
+}
+
+.az-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.az-contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #2b303a;
+}
+
+.az-contact-list li:first-child {
+  border-top: 1px solid #2b303a;
+}
+
+.az-contact-kind {
+  color: #8a8f99;
+}
+
+.az-contact-list a {
+  font-family: var(--az-serif);
+  font-size: 1.2rem;
+  color: #f3f1ec !important;
+  transition: color 0.15s ease;
+}
+
+.az-contact-list a:hover,
+.az-contact-list a:focus-visible {
+  color: #9fb0d4 !important;
+}
+
+.az-notfound {
+  padding: 6rem 0 8rem;
+}
+
+.az-notfound .az-heading {
+  margin-top: 0.8rem;
+}
+
+/* ---------------------------------------------------------------------------
+ * Small screens
+ * ------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .az-nav ul {
+    display: none;
+  }
+
+  .az-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0 3rem;
+  }
+
+  .az-portrait {
+    order: -1;
+    max-width: 320px;
+  }
+
+  .az-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .az-facts > div:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .az-facts > div:nth-child(n + 3) {
+    border-top: 1px solid var(--az-rule);
+  }
+
+  .az-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2.4rem 0;
+  }
+
+  .az-details li {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .az-contact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 3.5rem;
+  }
+
+  .az-contact-list li {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
